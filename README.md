@@ -61,6 +61,6 @@ I have created browser chrome extension to work with this server to receive the 
 
 Any changes made to `.html`, `.js`, `.css`, or `.cls` files within the specified project directory will be detected by the server. After a 2-second debounce period, a refresh command will be send to browser extension client to refresh the browser tab as per config hostname.
 
-### Configuring for Your Project
+### Configuration
 
 Edit the `config.json` file to specify the path to your project directory, host URL and file extensions that clients should refresh.
