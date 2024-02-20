@@ -1,0 +1,22 @@
+{
+  "name": "websocketfiletracker",
+  "version": "1.0.0",
+  "description": "This project watch the files and send message to client with web socket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node websocket.js"
+  },
+  "keywords": [
+    "web",
+    "socket"
+  ],
+  "author": "Anuj Singla",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "ws": "^8.16.0"
+  }
+}
