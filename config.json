@@ -1,0 +1,5 @@
+{
+    "projectDir": "Documents/development/salesforce_lightning/FriendShips/force-app/",
+    "hostUrl": "https://empathetic-impala-er293r-dev-ed.trailblaze.lightning.force.com",
+    "fileExtensions": ["**/*.html", "**/*.js", "**/*.css", "**/*.cls"]
+}

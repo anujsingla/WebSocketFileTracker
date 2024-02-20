@@ -2,26 +2,29 @@ const WebSocket = require("ws");
 const chokidar = require("chokidar");
 const os = require("os");
 const path = require("path");
+const fs = require("fs");
+
+const configPath = "./config.json";
+let config;
+try {
+  const configContent = fs.readFileSync(configPath, "utf8");
+  config = JSON.parse(configContent);
+} catch (error) {
+  console.error("Failed to read or parse configuration file:", error);
+}
 
 // Dynamically get the current user's home directory
 const homeDirectory = os.homedir();
 
-console.log("homeDirectory", homeDirectory);
-
 // Define the base path relative to the user's home directory
-const basePath = path.join(
-  homeDirectory,
-  "Documents/development/salesforce_lightning/FriendShips/force-app/"
-);
+const basePath = path.join(homeDirectory, config.projectDir);
 
 // Define the patterns you want to watch within that directory
-const patternsToWatch = ["**/*.html", "**/*.js", "**/*.css", "**/*.cls"].map(
-  (pattern) => path.join(basePath, pattern)
+const patternsToWatch = config.fileExtensions.map((pattern) =>
+  path.join(basePath, pattern)
 ); // Prepend the base path to each pattern
 
 const wss = new WebSocket.Server({ port: 9995 });
-const hostUrl =
-  "https://empathetic-impala-er293r-dev-ed.trailblaze.lightning.force.com";
 
 const watcher = chokidar.watch(patternsToWatch, {
   persistent: true,
@@ -45,7 +48,7 @@ watcher.on("change", (path) => {
         console.log("refresh message send");
         const message = JSON.stringify({
           command: "refresh",
-          host: hostUrl,
+          host: config.hostUrl,
         });
         client.send(message);
       }
