@@ -23,15 +23,15 @@ I have created [Chrome Browser Extension](https://github.com/anujsingla/WebSocke
    git clone https://github.com/anujsingla/WebSocketFileTracker
    cd WebSocketFileTracker
    ```
-2. **Install Dependencies**
+2. **Install Dependencies**  
    Ensure you have Node.js installed on your system, then run:
 
    ```bash
    npm install
    ```
 
-3. **Configuration**
-   Edit the `config.json` file in the root directory to specify your project directory, host URL and file extension:
+3. **Configuration**  
+   Edit the `config.json` file in the root directory to specify your project directory, host URL and file extension:  
    **Note: This is just an example, you can change as per your requirement.**
    ```json
    {
