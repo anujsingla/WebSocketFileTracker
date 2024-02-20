@@ -45,6 +45,13 @@ I have created [Chrome Browser Extension](https://github.com/anujsingla/WebSocke
 
 To effectively use this WebSocket File Watcher and Refresher in your development workflow, follow these steps:
 
+## Salesforce Local Development Setup
+
+Follow these steps to use this tool for salesforce local development:
+
+1. Enable Debug Mode and user in Salesforce. Please follow these links. [Link1](https://developer.salesforce.com/docs/platform/lwc/guide/debug-mode-enable.html) and [Link2](https://developer.salesforce.com/docs/platform/lwc/guide/debug-debug-mode.html).
+2. Disable the secure and persistent browser caching setting in a sandbox or Developer Edition org to see the effect of any code changes without emptying the cache [link](https://developer.salesforce.com/docs/platform/lwc/guide/debug-disable-caching.html).
+
 ### Starting the WebSocket Server
 
 1. Navigate to your project directory in the terminal.
