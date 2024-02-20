@@ -30,13 +30,13 @@ I have created [Chrome Browser Extension](https://github.com/anujsingla/WebSocke
 3. **Configuration**
    Edit the `config.json` file in the root directory to specify your project directory, host URL and file extension:
    **Note: This is just an example, you can change as per your requirement.**
-   `json
-    {
-      "projectDir": "Documents/development/salesforce_lightning/FriendShips/force-app/",
-      "hostUrl": "https://www.npmjs.com",
-      "fileExtensions": ["**/*.html", "**/*.js", "**/*.css", "**/*.cls"]
-    }
-    `
+   ```json
+   {
+     "projectDir": "Documents/development/salesforce_lightning/FriendShips/force-app/",
+     "hostUrl": "https://www.npmjs.com",
+     "fileExtensions": ["**/*.html", "**/*.js", "**/*.css", "**/*.cls"]
+   }
+   ```
 
 ## Usage
 
